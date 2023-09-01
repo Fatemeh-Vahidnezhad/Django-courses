@@ -26,7 +26,7 @@
         </div>
         <div class="mx-2 text-white">
             {% if user.is_authenticated %}
-             Welcome {{ user.username }} | <a href="{% url 'logout' %}"  class = 'text-light'>Logout</a>
+             Welcome {{ user.username }} | <a href="{% url 'logout' %}"  class = 'text-light'>Logout </a>|<a href="{% url 'password_change' %} "  class = 'text-light'> change password</a>
             {% else %}
             <a href="{% url 'login' %}"  class = 'text-light'>Login</a>| <a href="{% url 'signup' %} "  class = 'text-light'>sign up</a>
             {% endif %}
