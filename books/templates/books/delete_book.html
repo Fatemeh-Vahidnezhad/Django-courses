@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} <title>کتاب جدید</title> {% endblock title %}
+
+{% block content %}
+<div class="container mt-3">
+    <div class="card shadow-sm my-3">
+        <div class="card-body">
+            <h1>Delete the book?</h1>
+            <p>Are you sure to delete the book " {{book.title}} "?</p>
+            <form method="post" action="">
+                {% csrf_token %}
+                <input class="btn btn-danger mt-4" type="submit" value="Delete" >
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -8,5 +8,12 @@
 <a href="{{ book.get_absolute_url }}"> <h1>{{ book.title }}</h1> </a>
 <p>{{book.author }}</p>
 
+
+<!--<form action="" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <input  class="btn btn-success mt-4"  value="add new book">-->
+<!--</form>-->
 {% endfor %}
+<a href="{% url 'create_book' %}"><button type="submit" class="btn btn-success mt-4">ایجاد کتاب جدید</button></a>
+
 {% endblock content %}

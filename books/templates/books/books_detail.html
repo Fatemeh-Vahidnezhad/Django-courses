@@ -9,4 +9,7 @@
 <h1>{{book.title}}</h1>
 <p>{{ book.description }}</p>
 <p>{{book.author }}</p>
+<a href="{% url 'update_book' book.id %}"><button type="submit" class="btn btn-warning mt-4">edit</button></a>
+<a href="{% url 'delete_book' book.id %}"><button type="submit" class="btn btn-danger mt-4">delete</button></a>
+
 {% endblock content %}
