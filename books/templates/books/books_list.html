@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block title %} <title>لیست کتاب ها</title> {% endblock title %}
+
+{% block content %}
+{% for book in book_lists %}
+<!--<a href="{% url 'book_detail' book.id %}">-->
+<a href="{{ book.get_absolute_url }}"> <h1>{{ book.title }}</h1> </a>
+<p>{{book.author }}</p>
+
+{% endfor %}
+{% endblock content %}
