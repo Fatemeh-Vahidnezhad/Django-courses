@@ -7,6 +7,7 @@ from .models import Books
 
 class BookListView(generic.ListView):
     model = Books
+    paginate_by = 2
     template_name = 'books/books_list.html'
     context_object_name = 'book_lists'
 
