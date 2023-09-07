@@ -6,7 +6,10 @@ class Books(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     author = models.CharField(max_length=200)
-    pages = models.PositiveIntegerField()
+    cover = models.ImageField(upload_to='covers/', blank=True)
+    translator = models.CharField(max_length=200, blank=True)
+    publisher = models.CharField(max_length=200, blank=True)
+
 
     def __str__(self):
         return self.title

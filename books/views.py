@@ -20,13 +20,13 @@ class BookDetailView(generic.DetailView):
 class CreateBookView(generic.CreateView):
     model = Books
     template_name = 'books/create_books.html'
-    fields = ('title', 'author', 'pages', 'description',)
+    fields = ['title', 'author', 'description', 'cover', ]
 
 
 class UpdateBookView(generic.UpdateView):
     model = Books
     template_name = 'books/update_book.html'
-    fields = ('title', 'author', 'pages', 'description',)
+    fields = ['title', 'author', 'description', 'cover', ]
 
 
 class DeleteBookView(generic.DeleteView):

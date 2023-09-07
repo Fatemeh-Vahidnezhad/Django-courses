@@ -1,7 +1,9 @@
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
+<title>
+{% block title %} کتاب جدید{% endblock title %}
+</title>
 
-{% block title %} <title>کتاب جدید</title> {% endblock title %}
 
 {% block content %}
 <!--<div class="container mt-3">-->
@@ -24,8 +26,8 @@
             <div class="card shadow my-3">
                 <h5 class="card-header bg-success text-light px-5">فرم</h5>
                 <div class="px-5 pt-3 pb-5">
-                    <form method="POST">
-                        <div class="form-group py-2">
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="form-group py-2" >
                             <!--                            <label class="py-1">عنوان کتاب:</label>-->
                             <!--                            <input type="text" class="form-control" placeholder="" name="title">-->
                             <!--                        </div>-->
